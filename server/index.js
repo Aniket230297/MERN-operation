@@ -5,7 +5,12 @@ const UserModel = require("./models/Users.js");
 require("dotenv").config(); // Import dotenv to use .env variables
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: ["https://curd-mern.netlify.app"], // Allow only your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+
 app.use(express.json());
 
 // Use the MONGO_URI from the .env file
