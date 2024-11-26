@@ -60,7 +60,7 @@ app.post("/createuser", (req, res) => {
 //   console.log("server is running");
 // });
 
-const PORT = process.env.PORT || 3001;  // Use the port provided by Render
+const PORT = process.env.PORT || 10000;  // Use the port provided by Render
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
